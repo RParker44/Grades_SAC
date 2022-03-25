@@ -32,11 +32,13 @@ Partial Class Form1
         Me.lblButtonPrompt = New System.Windows.Forms.Label()
         Me.lblMainTitle = New System.Windows.Forms.Label()
         Me.lblSubtitle = New System.Windows.Forms.Label()
+        Me.btnSort = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(35, 115)
+        Me.btnAdd.Location = New System.Drawing.Point(26, 102)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(109, 42)
         Me.btnAdd.TabIndex = 0
@@ -46,7 +48,7 @@ Partial Class Form1
         'txtStudentAmount
         '
         Me.txtStudentAmount.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStudentAmount.Location = New System.Drawing.Point(265, 78)
+        Me.txtStudentAmount.Location = New System.Drawing.Point(252, 72)
         Me.txtStudentAmount.Name = "txtStudentAmount"
         Me.txtStudentAmount.Size = New System.Drawing.Size(109, 20)
         Me.txtStudentAmount.TabIndex = 1
@@ -55,7 +57,7 @@ Partial Class Form1
         '
         Me.lblStudentsPrompt.AutoSize = True
         Me.lblStudentsPrompt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStudentsPrompt.Location = New System.Drawing.Point(36, 78)
+        Me.lblStudentsPrompt.Location = New System.Drawing.Point(23, 72)
         Me.lblStudentsPrompt.Name = "lblStudentsPrompt"
         Me.lblStudentsPrompt.Size = New System.Drawing.Size(223, 16)
         Me.lblStudentsPrompt.TabIndex = 2
@@ -64,14 +66,14 @@ Partial Class Form1
         'lblDisplay
         '
         Me.lblDisplay.AutoSize = True
-        Me.lblDisplay.Location = New System.Drawing.Point(416, 43)
+        Me.lblDisplay.Location = New System.Drawing.Point(316, 42)
         Me.lblDisplay.Name = "lblDisplay"
         Me.lblDisplay.Size = New System.Drawing.Size(0, 13)
         Me.lblDisplay.TabIndex = 3
         '
         'btnRead
         '
-        Me.btnRead.Location = New System.Drawing.Point(150, 115)
+        Me.btnRead.Location = New System.Drawing.Point(141, 102)
         Me.btnRead.Name = "btnRead"
         Me.btnRead.Size = New System.Drawing.Size(109, 42)
         Me.btnRead.TabIndex = 4
@@ -80,7 +82,7 @@ Partial Class Form1
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(265, 114)
+        Me.btnClear.Location = New System.Drawing.Point(371, 103)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(109, 43)
         Me.btnClear.TabIndex = 5
@@ -110,7 +112,7 @@ Partial Class Form1
         '
         Me.lblMainTitle.AutoSize = True
         Me.lblMainTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMainTitle.Location = New System.Drawing.Point(60, 19)
+        Me.lblMainTitle.Location = New System.Drawing.Point(36, 24)
         Me.lblMainTitle.Name = "lblMainTitle"
         Me.lblMainTitle.Size = New System.Drawing.Size(280, 37)
         Me.lblMainTitle.TabIndex = 9
@@ -120,17 +122,37 @@ Partial Class Form1
         '
         Me.lblSubtitle.AutoSize = True
         Me.lblSubtitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubtitle.Location = New System.Drawing.Point(21, 191)
+        Me.lblSubtitle.Location = New System.Drawing.Point(37, 198)
         Me.lblSubtitle.Name = "lblSubtitle"
-        Me.lblSubtitle.Size = New System.Drawing.Size(578, 31)
+        Me.lblSubtitle.Size = New System.Drawing.Size(369, 31)
         Me.lblSubtitle.TabIndex = 10
-        Me.lblSubtitle.Text = "Parent Teacher Interviews Search Function"
+        Me.lblSubtitle.Text = "Interviews Search Function"
+        '
+        'btnSort
+        '
+        Me.btnSort.Location = New System.Drawing.Point(256, 103)
+        Me.btnSort.Name = "btnSort"
+        Me.btnSort.Size = New System.Drawing.Size(109, 42)
+        Me.btnSort.TabIndex = 11
+        Me.btnSort.Text = "Sort CSV (Top Scorers)"
+        Me.btnSort.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(504, 166)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Label1"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(622, 360)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnSort)
         Me.Controls.Add(Me.lblSubtitle)
         Me.Controls.Add(Me.lblMainTitle)
         Me.Controls.Add(Me.lblButtonPrompt)
@@ -158,4 +180,6 @@ Partial Class Form1
     Friend WithEvents lblButtonPrompt As Label
     Friend WithEvents lblMainTitle As Label
     Friend WithEvents lblSubtitle As Label
+    Friend WithEvents btnSort As Button
+    Friend WithEvents Label1 As Label
 End Class
