@@ -3,7 +3,7 @@
     Dim English(1) As String
     Dim Maths(1) As String
     Dim PE(1) As String
-    Dim Title As String = "Name,English,Maths,PE"
+    Dim Title As String = "Name, English, Maths, PE"
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
@@ -39,7 +39,7 @@
 
         For i = 0 To Iterations
             If IsNumeric(English(i)) And IsNumeric(Maths(i)) And IsNumeric(PE(i)) Then
-                If (English(i) < 101) And (Maths(i) < 101) And (PE(i) < 101) Then
+                If (English(i) < 100) And (Maths(i) < 100) And (PE(i) < 100) Then
                     If (English(i) >= 0) And (Maths(i) >= 0) And (PE(i) >= 0) Then
                         ReDim Students(Iterations)
                         MsgBox("You entered " & Students.Length & " students into the database.")
@@ -52,7 +52,7 @@
                         MsgBox("The program will now exit.")
                     End If
                 Else
-                    MsgBox("Only enter grades under or equal to 100.")
+                    MsgBox("Only enter grades under 100.")
                     MsgBox("The program will now exit.")
                     lblDisplay.Text = ""
                     Exit For
@@ -74,7 +74,7 @@
             MyReader.TextFieldType = FileIO.FieldType.Delimited
             MyReader.SetDelimiters(",")
             Dim Row As String()
-            Dim x As Integer = 0 'Increments through Rows
+            Dim x As Integer = 0
             Dim goThru As Integer = 0
             While Not MyReader.EndOfData
                 Row = MyReader.ReadFields()
@@ -301,8 +301,10 @@
                    "Give them a cookie, or something. Great work!")
         Else
             Return MsgBox("Only enter a choice from the following options: English | Maths | PE")
-
         End If
+
+        msg = ""
+
     End Function
     Private Sub btnRead_Click(sender As Object, e As EventArgs) Handles btnRead.Click
         ReadFile()
@@ -357,6 +359,7 @@
         My.Computer.FileSystem.WriteAllText("D:\Grading\grades.csv", "", False)
         My.Computer.FileSystem.WriteAllText("D:\Grading\grades.csv", Title, True)
         'Simply sets all cells in the CSV to false, wiping them. Then resets the file with the header.
+
     End Sub
 
     Private Sub btnSort_Click(sender As Object, e As EventArgs) Handles btnSort.Click
